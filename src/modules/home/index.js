@@ -1,11 +1,16 @@
 import * as React from 'react';
 import * as Styles from './styles';
 import Header from '../../components/header';
+import Sessions from './components/sessions';
 
 const HomeScreen = () => (
-  <Styles.SafeArea>
+  <Styles.Contain>
     <Header />
-  </Styles.SafeArea>
+    <Styles.Scroll>
+      <Sessions />
+      <Sessions />
+    </Styles.Scroll>
+  </Styles.Contain>
 );
 
 export default HomeScreen;

@@ -1,13 +1,16 @@
 import styled from 'styled-components/native';
 import { Colors } from '../utils'
 
-export const Contain = styled.View`
+export const SafeArea = styled.SafeAreaView`
   background-color: ${() => Colors.background};
+  box-shadow: 0px 5px 2px ${() => Colors.shadow};
+`;
+
+export const Contain = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 18px;
-  box-shadow: 0px 5px 2px ${() => Colors.shadow};
 `;
 
 export const Icon = styled.Pressable`
