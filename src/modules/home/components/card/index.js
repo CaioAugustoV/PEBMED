@@ -7,7 +7,6 @@ const Cards = () => (
       <Styles.ContainImage>
         <Styles.Image source={{uri: 'https://picsum.photos/id/703/400/300'}} />
         <Styles.Mask />
-        {/* <Styles.Mask colors={['#4c669f', '#3b5998', '#192f6a']} /> */}
       </Styles.ContainImage>
       <Styles.Text>Teste abcabc</Styles.Text>
     </Styles.Card>
@@ -15,7 +14,6 @@ const Cards = () => (
       <Styles.ContainImage>
         <Styles.Image source={{uri: 'https://picsum.photos/id/703/400/300'}} />
         <Styles.Mask />
-        {/* <Styles.Mask colors={['#4c669f', '#3b5998', '#192f6a']} /> */}
       </Styles.ContainImage>
       <Styles.Text>Teste abcabc</Styles.Text>
     </Styles.Card>
@@ -23,7 +21,6 @@ const Cards = () => (
       <Styles.ContainImage>
         <Styles.Image source={{uri: 'https://picsum.photos/id/703/400/300'}} />
         <Styles.Mask />
-        {/* <Styles.Mask colors={['#4c669f', '#3b5998', '#192f6a']} /> */}
       </Styles.ContainImage>
       <Styles.Text>Teste abcabc</Styles.Text>
     </Styles.Card>
@@ -31,7 +28,6 @@ const Cards = () => (
       <Styles.ContainImage>
         <Styles.Image source={{uri: 'https://picsum.photos/id/703/400/300'}} />
         <Styles.Mask />
-        {/* <Styles.Mask colors={['#4c669f', '#3b5998', '#192f6a']} /> */}
       </Styles.ContainImage>
       <Styles.Text>Teste abcabc</Styles.Text>
     </Styles.Card>

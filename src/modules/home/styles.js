@@ -10,6 +10,8 @@ export const SafeArea = styled.SafeAreaView`
   background-color: ${() => Colors.background};
 `;
 
-export const Scroll = styled.ScrollView`
+export const Scroll = styled.ScrollView.attrs({
+  showsVerticalScrollIndicator: false
+})`
   flex: 1;
 `;
