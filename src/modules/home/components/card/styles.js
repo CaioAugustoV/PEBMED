@@ -10,7 +10,7 @@ export const Contain = styled.View`
   flex-wrap: wrap;
 `;
 
-export const Card = styled.View`
+export const Card = styled.Pressable`
   width: 48%;
   margin: 10px 0;
 `;
@@ -42,3 +42,10 @@ export const Mask = styled(LinearGradient).attrs({
   position: absolute;
   border-radius: 10px;
 `;
+
+export const Animation = styled.Pressable`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+`;
+

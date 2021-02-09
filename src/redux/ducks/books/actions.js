@@ -8,3 +8,8 @@ export const setBooks = (data = null) => ({
   type: Types.BOOKS,
   payload: data,
 });
+
+export const setFavorite = (id = null, value = false) => ({
+  type: Types.FAVORITE,
+  payload: {id, value},
+});

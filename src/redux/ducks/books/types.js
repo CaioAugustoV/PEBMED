@@ -1,6 +1,7 @@
 const Types = {
-  ASYNC_BOOKS: '@CHECKOUT/ASYNC_BOOKS',
-  BOOKS: '@CHECKOUT/BOOKS',
+  ASYNC_BOOKS: '@BOOKS/ASYNC_BOOKS',
+  BOOKS: '@BOOKS/BOOKS',
+  FAVORITE: '@BOOKS/FAVORITE',
 };
 
 export default Types;
