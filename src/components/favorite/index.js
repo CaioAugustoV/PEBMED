@@ -29,4 +29,4 @@ const Favorite = ({id}) => {
   );
 };
 
-export default Favorite;
+export default React.memo(Favorite);

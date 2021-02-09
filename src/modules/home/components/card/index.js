@@ -2,21 +2,25 @@ import * as React from 'react';
 import * as Styles from './styles';
 import * as actions from '../../../../redux/ducks/books/actions';
 import Favorite from '../../../../components/favorite';
-import { useSelector, useDispatch } from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {useNavigation} from '@react-navigation/native';
 
 const Cards = ({items = []}) => {
-  const favorite = useSelector(state => state.books.favorite || {});
+  const favorite = useSelector((state) => state.books.favorite || {});
   const dispatch = useDispatch();
+  const navigation = useNavigation();
 
   const setFavorite = (id) => {
-    const value = favorite[id] || false
-    dispatch(actions.setFavorite(id, !value))
+    const value = favorite[id] || false;
+    dispatch(actions.setFavorite(id, !value));
   };
 
   return (
     <Styles.Contain>
       {items.map((res) => (
-        <Styles.Card key={res?.id} onPress={() => alert('card')}>
+        <Styles.Card
+          key={res?.id}
+          onPress={() => navigation.navigate('details', {details: res})}>
           <Styles.ContainImage>
             <Styles.Image source={{uri: res?.urlImage}} />
             <Styles.Mask />

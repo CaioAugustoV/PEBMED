@@ -5,7 +5,7 @@ import Sessions from './components/sessions';
 import {useSelector, useDispatch} from 'react-redux';
 import * as actions from '../../redux/ducks/books/actions';
 
-const HomeScreen = () => {
+const Home = () => {
   const books = useSelector((state) => state.books.books || []);
   const dispatch = useDispatch();
 
@@ -13,7 +13,6 @@ const HomeScreen = () => {
     dispatch(actions.getAllBooks());
   }, []);
 
-  console.log(books);
   return (
     <Styles.Contain>
       <Header />
@@ -26,4 +25,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default Home;

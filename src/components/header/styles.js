@@ -4,6 +4,7 @@ import { Colors } from '../utils'
 export const SafeArea = styled.SafeAreaView`
   background-color: ${() => Colors.background};
   box-shadow: 0px 5px 2px ${() => Colors.shadow};
+  elevation: 5;
 `;
 
 export const Contain = styled.View`
