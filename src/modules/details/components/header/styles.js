@@ -43,8 +43,9 @@ export const Text = styled.Text`
 `;
 
 export const Favorite = styled.Pressable`
+  z-index: 9999;
   position: absolute;
-  bottom: -25px;
+  top: 190;
   right: 18px;
   background-color: #191847;
   width: 50px;
@@ -54,4 +55,5 @@ export const Favorite = styled.Pressable`
   border-radius: 50px;
   box-shadow: 0px 5px 2px ${() => Colors.shadow};
   elevation: 5;
+  transform: translateY(25px);
 `;

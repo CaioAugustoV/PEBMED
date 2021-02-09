@@ -1,14 +1,16 @@
 import * as React from 'react';
-import {StatusBar} from 'react-native';
+import {StatusBar, TouchableOpacity} from 'react-native';
 import {Icons} from '../../../../components/utils';
 import * as Styles from './styles';
 import Favorite from '../../../../components/favorite';
 import {useSelector, useDispatch} from 'react-redux';
-import * as actions from '../../../../redux/ducks/books/actions'
+import * as actions from '../../../../redux/ducks/books/actions';
+import {useNavigation} from '@react-navigation/native';
 
 const Header = ({id = null, url = null, title = null}) => {
   const favorite = useSelector((state) => state.books.favorite || {});
   const dispatch = useDispatch();
+  const navigation = useNavigation();
 
   const setFavorite = (id) => {
     const value = favorite[id] || false;
@@ -23,8 +25,11 @@ const Header = ({id = null, url = null, title = null}) => {
         <Styles.Image source={{uri: url}} />
         <Styles.Mask />
       </Styles.Contain>
+      <Styles.Favorite onPress={() => setFavorite(id)}>
+        <Favorite id={id} />
+      </Styles.Favorite>
       <Styles.SafeArea>
-        <Styles.Pressable>
+        <Styles.Pressable onPress={() => navigation.goBack()}>
           <Icons
             name="arrow"
             color="#FFF"
@@ -34,9 +39,6 @@ const Header = ({id = null, url = null, title = null}) => {
         </Styles.Pressable>
         {title && <Styles.Text>{title}</Styles.Text>}
       </Styles.SafeArea>
-      <Styles.Favorite onPress={() => setFavorite(id)}>
-        <Favorite id={id} />
-      </Styles.Favorite>
     </React.Fragment>
   );
 };

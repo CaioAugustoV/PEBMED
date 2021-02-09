@@ -10,7 +10,19 @@ const DetailsScreen = () => {
   return (
     <Styles.Contain>
       <Styles.Scroll>
-        <Header id={details?.id} url={details?.urlImage} title={details?.name} />
+        <Header
+          id={details?.id}
+          url={details?.urlImage}
+          title={details?.name}
+        />
+        <Styles.Texts>
+          <Styles.Title>DESCRIÇÃO</Styles.Title>
+          <Styles.Text margin>{details?.description}</Styles.Text>
+          <Styles.Title>Autores</Styles.Title>
+          {details?.authors?.map((res, i) => (
+            <Styles.Text key={i}>{res.name}</Styles.Text>
+          ))}
+        </Styles.Texts>
       </Styles.Scroll>
     </Styles.Contain>
   );
