@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import cards from './ducks/cards';
+import books from './ducks/books';
 
 const reducers = combineReducers({
-  cards,
+  books,
 });
 
 export default reducers;

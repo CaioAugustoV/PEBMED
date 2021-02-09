@@ -1,15 +1,15 @@
 import Types from './types';
 
 const initialState = {
-  data: null,
+  books: null,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case Types.DATA:
+    case Types.BOOKS:
       return {
         ...state,
-        data: action.payload,
+        books: action.payload,
       };
     default:
       return state;
