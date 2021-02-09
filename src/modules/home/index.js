@@ -1,12 +1,11 @@
 import * as React from 'react';
-import {View, Text} from 'react-native';
-import {Icons} from '../../components/utils';
+import * as Styles from './styles';
+import Header from '../../components/header';
 
 const HomeScreen = () => (
-  <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-    <Icons name="arrow" color="#000" size={20} />
-    <Text>Home Screen</Text>
-  </View>
+  <Styles.SafeArea>
+    <Header />
+  </Styles.SafeArea>
 );
 
 export default HomeScreen;
